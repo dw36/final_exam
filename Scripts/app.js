@@ -13,38 +13,36 @@ const albums = [
 
 // const imgs = document.getElementsByTagName('img');
 
-Album_1.addEventListener('click', e => {
-    if (albums[0].inCart) {
-        alert("Album already in cart.")
-    }else{
-        addToCart(1);
+document.addEventListener('click', function (event) {
+    if ( event.target ==  Album_1) {
+        if (albums[0].inCart) {
+            alert("Album already in cart.")
+        }else{
+            addToCart(1);
+        }
     }
-
-});
-
-Album_2.addEventListener('click', e => {
-    if (albums[1].inCart) {
-        alert("Album already in cart.")
-    }else{
-        addToCart(2);
+    else if ( event.target ==  Album_2) {
+        if (albums[1].inCart) {
+            alert("Album already in cart.")
+        }else{
+            addToCart(2);
+        }
     }
-});
-
-Album_3.addEventListener('click', e => {
-    if (albums[2].inCart) {
-        alert("Album already in cart.")
-    }else{
-        addToCart(3);
+    else if ( event.target ==  Album_3) {
+        if (albums[2].inCart) {
+            alert("Album already in cart.")
+        }else{
+            addToCart(3);
+        }
     }
-});
-
-Album_4.addEventListener('click', e => {
-    if (albums[3].inCart) {
-        alert("Album already in cart.")
-    }else{
-        addToCart(4);
+    else if ( event.target ==  Album_4) {
+        if (albums[3].inCart) {
+            alert("Album already in cart.")
+        }else{
+            addToCart(4);
+        }
     }
-});
+}, false);
 
 function updateImgSrc(){
     document.getElementById("Album 1").src = "Images/Album1.png";
