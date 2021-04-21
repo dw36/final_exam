@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+body {
+    background-color: #faf4ed;
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+}
+
+li {
+    display: inline;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    background-color: #9893a5;
+    text-align: center;
+}
+
+.nav {
+
+    left: 0;
+    top: 100;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    margin: 0;
+}
+
+.band-name {
+    background-color: #9893a5;
+    text-align: center;
+    margin: 5% 0;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.shop-items {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
+    text-align: center;
+}
+
+.shop-item-image {
+    width: 100%;
+}
+
+.shop-item {
+    padding: 10%;
+}
+
+.cart {
+    background-color: #f2e9de;
+    padding: 5%;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.cart-row {
+    text-align: center;
+    display: block;
+}
+
+/*  640px and up */
+@media only screen and (min-width: 640px) {
+    .shop-items {
+        grid-template-columns: 35vw auto 35vw;
+    }
+    .shop-item {
+        padding: 20%;
+    }
+}
