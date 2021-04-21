@@ -11,36 +11,18 @@ const albums = [
   { name: "Album 4", price: 19.99, inCart: false }
 ];
 
-// const imgs = document.getElementsByTagName('img');
-
 document.addEventListener('click', function (event) {
     if ( event.target ==  Album_1) {
-        if (albums[0].inCart) {
-            alert("Album already in cart.")
-        }else{
-            addToCart(1);
-        }
+        addToCart(1);
     }
     else if ( event.target ==  Album_2) {
-        if (albums[1].inCart) {
-            alert("Album already in cart.")
-        }else{
-            addToCart(2);
-        }
+        addToCart(2);
     }
     else if ( event.target ==  Album_3) {
-        if (albums[2].inCart) {
-            alert("Album already in cart.")
-        }else{
-            addToCart(3);
-        }
+        addToCart(3);
     }
     else if ( event.target ==  Album_4) {
-        if (albums[3].inCart) {
-            alert("Album already in cart.")
-        }else{
-            addToCart(4);
-        }
+        addToCart(4);
     }
 }, false);
 
@@ -53,6 +35,12 @@ function updateImgSrc(){
 
 function addToCart(albumId){
     albumIdx = albumId - 1;
+
+    if (albums[albumIdx].inCart) {
+        alert("Album already in cart.")
+        return
+    }
+
     albums[albumIdx].inCart = true;
 
     cartList.innerHTML += `
@@ -63,7 +51,6 @@ function addToCart(albumId){
             $ ${albums[albumIdx].price} </div>
         </div>
         `;
-
 }
 
 updateImgSrc()
